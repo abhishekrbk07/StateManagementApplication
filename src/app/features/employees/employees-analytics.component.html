@@ -1,0 +1,26 @@
+<mat-card class="panel">
+  <div class="head">
+    <div>
+      <div class="t">Employee Analytics</div>
+    </div>
+  </div>
+
+  <!-- Loader when API is in progress -->
+  <div class="loader" *ngIf="(inFlight$ | async)">
+    <mat-progress-spinner diameter="52" mode="indeterminate"></mat-progress-spinner>
+    <div class="loader-text">Loading employees for analytics…</div>
+  </div>
+
+  <!-- Error -->
+  <div class="error" *ngIf="(error$ | async) as err">
+    {{ err }}
+  </div>
+
+  <!-- Department stats -->
+  <div class="grid" *ngIf="!(inFlight$ | async)">
+    <mat-card class="stat" *ngFor="let d of (departmentStats$ | async)">
+      <div class="title">{{ d.department }}</div>
+      <div class="value">{{ d.count }}</div>
+    </mat-card>
+  </div>
+</mat-card>
