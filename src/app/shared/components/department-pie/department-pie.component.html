@@ -1,0 +1,40 @@
+<mat-card class="pieCard">
+  <div class="pieHead">
+    <div class="pieTitle">{{ title }}</div>
+    <div class="pieSub">{{ total }} employees</div>
+  </div>
+
+  <div class="pieBody" *ngIf="stats.length; else empty">
+    <svg viewBox="0 0 160 160" class="svg">
+      <g>
+        <path
+          *ngFor="let s of slices(); let i = index"
+          [attr.d]="s.path"
+          [attr.fill]="s.color"
+          opacity="0.92"
+        ></path>
+
+        <!-- donut hole -->
+        <circle cx="80" cy="80" r="38" fill="#ffffff"></circle>
+        <circle cx="80" cy="80" r="38" fill="rgba(2,6,23,0.02)"></circle>
+
+        <text x="80" y="78" text-anchor="middle" class="centerBig">{{ total }}</text>
+        <text x="80" y="98" text-anchor="middle" class="centerSmall">Total</text>
+      </g>
+    </svg>
+
+    <div class="legend">
+      <div class="legRow" *ngFor="let s of slices(); let i = index">
+        <span class="swatch" [style.background]="s.color"></span>
+        <div class="legMeta">
+          <div class="legName">{{ s.department }}</div>
+          <div class="legSub">{{ s.count }} • {{ s.pct }}%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #empty>
+    <div class="empty">No data yet. Open Employees tab or load once.</div>
+  </ng-template>
+</mat-card>

@@ -1,13 +1,19 @@
 <mat-card class="panel">
   <div class="head">
-    <div>
+    <div class="titleBlock">
       <div class="t">Employee Analytics</div>
+      <div class="s">Global store reuse • no re-fetch across tabs • memoized selectors</div>
+    </div>
+
+    <div class="pill">
+      <span class="dot" [class.on]="(inFlight$ | async)"></span>
+      <span class="pillText">{{ (inFlight$ | async) ? 'Fetching' : 'Ready' }}</span>
     </div>
   </div>
 
   <!-- Loader when API is in progress -->
   <div class="loader" *ngIf="(inFlight$ | async)">
-    <mat-progress-spinner diameter="52" mode="indeterminate"></mat-progress-spinner>
+    <mat-progress-spinner diameter="54" mode="indeterminate"></mat-progress-spinner>
     <div class="loader-text">Loading employees for analytics…</div>
   </div>
 
@@ -16,11 +22,34 @@
     {{ err }}
   </div>
 
-  <!-- Department stats -->
-  <div class="grid" *ngIf="!(inFlight$ | async)">
-    <mat-card class="stat" *ngFor="let d of (departmentStats$ | async)">
-      <div class="title">{{ d.department }}</div>
-      <div class="value">{{ d.count }}</div>
-    </mat-card>
+  <!-- Content -->
+  <div class="content" *ngIf="!(inFlight$ | async) && !(error$ | async)">
+    <div class="left">
+      <app-department-pie
+        [stats]="(departmentStats$ | async) ?? []"
+        [title]="'Department Split'"
+      ></app-department-pie>
+    </div>
+
+    <div class="right">
+      <div class="grid">
+        <mat-card class="stat" *ngFor="let d of (departmentStats$ | async)">
+          <div class="statTop">
+            <div class="badge">{{ short(d.department) }}</div>
+            <div class="dept">
+              <div class="deptName">{{ d.department }}</div>
+              <div class="deptSub">Employees</div>
+            </div>
+          </div>
+
+          <div class="statBottom">
+            <div class="value">{{ d.count }}</div>
+            <div class="miniBar">
+              <div class="fill" [style.width.%]="percent(d.count, (departmentStats$ | async) ?? [])"></div>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </mat-card>

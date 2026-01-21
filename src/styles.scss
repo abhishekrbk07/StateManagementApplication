@@ -1,4 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+/* ========= Apple-like Global Typography + UI Base ========= */
+:root {
+  --app-font:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    "SF Pro Display",
+    "Segoe UI",
+    Roboto,
+    Inter,
+    Helvetica,
+    Arial,
+    sans-serif;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  --bg: #f5f7fb;
+  --card: rgba(255, 255, 255, 0.92);
+  --stroke: rgba(2, 6, 23, 0.10);
+
+  --text-1: rgba(2, 6, 23, 0.92);
+  --text-2: rgba(2, 6, 23, 0.64);
+  --text-3: rgba(2, 6, 23, 0.48);
+
+  --primary: #1f6feb; /* you can keep Material theme, this is just for gradients */
+  --mint: #22c55e;
+  --violet: #8b5cf6;
+  --cyan: #06b6d4;
+
+  --radius-xl: 22px;
+  --radius-lg: 18px;
+  --radius-md: 14px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--app-font);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: var(--bg);
+}
+
+/* Smooth Apple-like easing everywhere */
+* {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Material button polishing (Apple rounded) */
+.mat-mdc-raised-button,
+.mat-mdc-outlined-button,
+.mat-mdc-button,
+.mat-mdc-icon-button {
+  border-radius: 999px !important;
+  font-family: var(--app-font);
+}
+
+.mat-mdc-raised-button.mat-primary {
+  height: 38px;
+  padding: 0 16px !important;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+  box-shadow: 0 10px 22px rgba(31, 111, 235, 0.22) !important;
+}
+
+.mat-mdc-outlined-button {
+  height: 36px;
+  font-weight: 600;
+}
+
+/* Cards look more premium */
+.mat-mdc-card {
+  border-radius: var(--radius-xl) !important;
+}
