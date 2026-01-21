@@ -1,0 +1,29 @@
+<div class="bar">
+  <div class="title">
+    <div class="h">Announcements</div>
+
+    <div class="s">
+      <span class="dot"></span>
+      Cached in store • instant UI updates
+      <span class="sep">•</span>
+      <span class="hint">NgRx powered</span>
+    </div>
+  </div>
+
+  <div class="searchWrap">
+    <mat-form-field appearance="outline" class="search" subscriptSizing="fixed">
+      <mat-icon matPrefix class="searchIcon">search</mat-icon>
+
+      <input
+        matInput
+        placeholder="Search title, message, author..."
+        [(ngModel)]="search"
+        (ngModelChange)="searchChange.emit($event)"
+      />
+
+      <button mat-icon-button matSuffix *ngIf="search" aria-label="Clear" (click)="clearSearch()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</div>

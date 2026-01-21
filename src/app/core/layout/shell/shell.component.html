@@ -7,7 +7,7 @@
 
     <div class="spacer"></div>
 
-    <nav class="nav">
+    <nav class="nav" aria-label="Primary">
       <a
         mat-button
         class="nav-link"
@@ -38,6 +38,16 @@
         <mat-icon class="nav-ic">analytics</mat-icon>
         <span class="nav-txt">Analytics</span>
       </a>
+      <a
+        mat-button
+        class="nav-link"
+        routerLink="/announcements"
+        routerLinkActive="active-link"
+      >
+        <mat-icon class="nav-ic">campaign</mat-icon>
+        <span class="nav-txt">Announcements</span>
+      </a>
+
     </nav>
   </div>
 </mat-toolbar>

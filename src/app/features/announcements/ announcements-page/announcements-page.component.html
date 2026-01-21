@@ -1,0 +1,74 @@
+<mat-card class="panel">
+  <div class="head">
+    <div class="left">
+      <div class="title">Announcements</div>
+      <div class="sub">
+        Latest updates • store
+        <span class="dot"></span>
+        API Calls: <b>{{ (requests$ | async) ?? 0 }}</b>
+      </div>
+    </div>
+
+    <div class="right" *ngIf="querySnapshot$ | async as q">
+      <mat-form-field class="search" appearance="outline" subscriptSizing="dynamic">
+        <mat-icon matPrefix class="ic">search</mat-icon>
+        <input
+          matInput
+          placeholder="Search title or message..."
+          [ngModel]="q.search"
+          (ngModelChange)="onSearch($event)"
+        />
+      </mat-form-field>
+
+      <button mat-stroked-button class="pill" (click)="toggleUnreadOnly(!q.showUnreadOnly)">
+        <mat-icon class="pillIc">{{ q.showUnreadOnly ? 'done_all' : 'mark_email_unread' }}</mat-icon>
+        {{ q.showUnreadOnly ? 'Show all' : 'Unread only' }}
+      </button>
+
+      <button mat-raised-button color="primary" class="pillPrimary" (click)="markAllRead()">
+        <mat-icon class="pillIc">task_alt</mat-icon>
+        Mark all read
+      </button>
+    </div>
+  </div>
+
+  <div class="loader" *ngIf="(inFlight$ | async)">
+    <mat-progress-spinner mode="indeterminate" diameter="42"></mat-progress-spinner>
+    <div class="loaderText">Loading announcements…</div>
+  </div>
+
+  <div class="error" *ngIf="(error$ | async) as err">{{ err }}</div>
+
+  <div class="grid" *ngIf="!(inFlight$ | async)">
+    <mat-card class="aCard" *ngFor="let a of (filtered$ | async); trackBy: trackById">
+      <div class="aTop">
+        <div class="aTitle">{{ a.title }}</div>
+
+        <mat-chip class="prio"
+                  [class.pInfo]="a.priority === 'Info'"
+                  [class.pImp]="a.priority === 'Important'"
+                  [class.pCrit]="a.priority === 'Critical'">
+          {{ a.priority }}
+        </mat-chip>
+      </div>
+
+      <div class="meta">
+        <span class="by">{{ a.author }}</span>
+        <span class="sep">•</span>
+        <span class="dt">{{ a.postedAt | date:'MMM d, h:mm a' }}</span>
+        <span class="sep">•</span>
+        <span class="unread" *ngIf="!a.read">Unread</span>
+        <span class="read" *ngIf="a.read">Read</span>
+      </div>
+
+      <div class="msg">{{ a.message }}</div>
+
+      <div class="row">
+        <button mat-stroked-button class="small" *ngIf="!a.read" (click)="markRead(a.id)">
+          <mat-icon>done</mat-icon>
+          Mark read
+        </button>
+      </div>
+    </mat-card>
+  </div>
+</mat-card>

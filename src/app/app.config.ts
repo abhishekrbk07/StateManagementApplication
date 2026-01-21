@@ -9,8 +9,9 @@ import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 
 import { appRoutes } from './app.routes';
-import { employeesFeature } from './features/employees/state/employees.reducer';
-import { EmployeesEffects } from './features/employees/state/employees.effects';
+import { employeesFeature } from './features/employees/store/employees.reducer';
+import { EmployeesEffects } from './features/employees/store/employees.effects';
+import {AnnouncementsEffects} from './features/announcements/store/announcements.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,7 +26,8 @@ export const appConfig: ApplicationConfig = {
     provideState(employeesFeature),
 
     // ✅ Effects
-    provideEffects([EmployeesEffects]),
+    provideEffects([EmployeesEffects, AnnouncementsEffects,
+    ]),
 
     // ✅ Devtools
     provideStoreDevtools({

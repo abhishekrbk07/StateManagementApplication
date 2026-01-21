@@ -20,9 +20,9 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { EmployeesToolbarComponent } from '../employees-toolbar/employees-toolbar.component';
 import { EmployeeCardComponent } from '../../../shared/components/employee-card/employee-card.component';
 
-import { EmployeesActions } from '../state/employees.actions';
-import { EmployeesSelectors } from '../state/employees.selectors';
-import { CreateEmployeeRequest } from '../state/employees.models';
+import { EmployeesActions } from '../store/employees.actions';
+import { EmployeesSelectors } from '../store/employees.selectors';
+import { CreateEmployeeRequest } from '../store/employees.models';
 
 @Component({
   selector: 'app-employees-page',

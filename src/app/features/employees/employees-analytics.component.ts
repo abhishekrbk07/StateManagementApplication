@@ -5,8 +5,8 @@ import { Store } from '@ngrx/store';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
-import { EmployeesActions } from './state/employees.actions';
-import { EmployeesSelectors } from './state/employees.selectors';
+import { EmployeesActions } from './store/employees.actions';
+import { EmployeesSelectors } from './store/employees.selectors';
 import {DepartmentPieComponent} from '../../shared/components/department-pie/department-pie.component';
 
 @Component({

@@ -1,6 +1,11 @@
 import { Routes } from '@angular/router';
 import { ShellComponent } from './core/layout/shell/shell.component';
 import {EmployeesAnalyticsComponent} from './features/employees/employees-analytics.component';
+import {provideState} from '@ngrx/store';
+import {announcementsReducer} from './features/announcements/store/announcements.reducer';
+import {provideEffects} from '@ngrx/effects';
+import {AnnouncementsEffects} from './features/announcements/store/announcements.effects';
+import {ANNOUNCEMENTS_FEATURE_KEY} from './features/announcements/store/announcements.feature';
 
 export const appRoutes: Routes = [
   {
@@ -18,7 +23,16 @@ export const appRoutes: Routes = [
           import('./features/employees/employees-page/employees-page.component').then(m => m.EmployeesPageComponent),
       },
       { path: 'analytics', component: EmployeesAnalyticsComponent },
-
+      {
+        path: 'announcements',
+        loadComponent: () =>
+          import('./features/announcements/ announcements-page/announcements-page.component')
+            .then(m => m.AnnouncementsPageComponent),
+        providers: [
+          provideState(ANNOUNCEMENTS_FEATURE_KEY, announcementsReducer),
+          provideEffects(AnnouncementsEffects),
+        ],
+      },
     ],
   },
   { path: '**', redirectTo: '' },

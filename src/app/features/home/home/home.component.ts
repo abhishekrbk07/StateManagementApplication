@@ -7,8 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
 import { StatBadgeComponent } from '../../../shared/components/stat-badge/stat-badge.component';
-import { EmployeesActions } from '../../employees/state/employees.actions';
-import { EmployeesSelectors } from '../../employees/state/employees.selectors';
+import { EmployeesActions } from '../../employees/store/employees.actions';
+import { EmployeesSelectors } from '../../employees/store/employees.selectors';
 
 @Component({
   selector: 'app-home',

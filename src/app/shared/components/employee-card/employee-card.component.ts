@@ -6,7 +6,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
-import { Employee } from '../../../features/employees/state/employees.models';
+import { Employee } from '../../../features/employees/store/employees.models';
 import {MatIcon} from '@angular/material/icon';
 
 @Component({

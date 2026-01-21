@@ -1,0 +1,74 @@
+:host {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Helvetica, Arial, sans-serif;
+}
+
+.bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .bar { grid-template-columns: 1fr; gap: 14px; }
+}
+
+.h {
+  font-size: 28px;
+  font-weight: 850;
+  letter-spacing: -0.6px;
+  color: #0f172a;
+  line-height: 1.15;
+}
+
+.s {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 650;
+  color: rgba(15, 23, 42, 0.6);
+  white-space: nowrap;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.9);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.14);
+}
+
+.sep { opacity: 0.5; }
+
+.hint {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.25px;
+  background: rgba(24, 119, 242, 0.08);
+  border: 1px solid rgba(24, 119, 242, 0.18);
+  color: rgba(24, 119, 242, 0.95);
+}
+
+.searchWrap { min-width: 360px; }
+@media (max-width: 900px) { .searchWrap { min-width: 100%; } }
+
+.search { width: 100%; }
+
+:host ::ng-deep .search .mat-mdc-text-field-wrapper {
+  border-radius: 999px !important;
+  background: #fff;
+}
+
+:host ::ng-deep .search .mdc-notched-outline__leading,
+:host ::ng-deep .search .mdc-notched-outline__trailing {
+  border-radius: 999px !important;
+}
+
+.searchIcon { opacity: 0.55; }

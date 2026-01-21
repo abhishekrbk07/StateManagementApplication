@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { Employee, CreateEmployeeRequest } from '../../features/employees/state/employees.models';
+import { Employee, CreateEmployeeRequest } from '../../features/employees/store/employees.models';
 
 @Injectable({ providedIn: 'root' })
 export class EmployeesService {
