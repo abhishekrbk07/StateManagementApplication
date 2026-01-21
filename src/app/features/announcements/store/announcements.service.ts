@@ -10,7 +10,7 @@ export class AnnouncementsService {
   getAnnouncements(): Observable<Announcement[]> {
     return this.http.get<Announcement[]>('/assets/announcements.json').pipe(
       // tiny delay to make loader visible like a real API
-      delay(350),
+      delay(2000),
       map(list => (list ?? []).map(a => ({
         ...a,
         title: (a.title ?? '').trim(),
