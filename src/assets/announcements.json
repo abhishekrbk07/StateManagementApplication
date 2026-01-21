@@ -1,0 +1,542 @@
+[
+  {
+    "id": "19",
+    "title": "Security Patch Window",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Security",
+    "postedAt": "2026-01-21T15:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "14",
+    "title": "Office Holiday Update",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "HR Team",
+    "postedAt": "2026-01-21T03:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "13",
+    "title": "Parking Access Changes",
+    "message": "If you face any issues, contact IT support with your employee ID and a brief description.",
+    "author": "HR Team",
+    "postedAt": "2026-01-20T15:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "26",
+    "title": "VPN Maintenance",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Finance",
+    "postedAt": "2026-01-19T13:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "49",
+    "title": "Payroll Processing Notice",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "Management",
+    "postedAt": "2026-01-18T04:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "58",
+    "title": "Office Holiday Update",
+    "message": "We are rolling out improvements to internal tools for faster performance and better stability.",
+    "author": "Finance",
+    "postedAt": "2026-01-16T11:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "47",
+    "title": "Benefits Enrollment Reminder",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "Admin",
+    "postedAt": "2026-01-15T03:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "15",
+    "title": "Payroll Processing Notice",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "HR Team",
+    "postedAt": "2026-01-14T13:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "18",
+    "title": "Security Patch Window",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "HR Team",
+    "postedAt": "2026-01-14T12:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "50",
+    "title": "Parking Access Changes",
+    "message": "We are rolling out improvements to internal tools for faster performance and better stability.",
+    "author": "Finance",
+    "postedAt": "2026-01-14T08:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "3",
+    "title": "Office Holiday Update",
+    "message": "We are rolling out improvements to internal tools for faster performance and better stability.",
+    "author": "Finance",
+    "postedAt": "2026-01-12T13:37:55.753Z",
+    "priority": "Important",
+    "read": false
+  },
+  {
+    "id": "46",
+    "title": "VPN Maintenance",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Security",
+    "postedAt": "2026-01-11T12:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "39",
+    "title": "System Downtime Alert",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "IT Ops",
+    "postedAt": "2026-01-11T11:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "34",
+    "title": "Benefits Enrollment Reminder",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Management",
+    "postedAt": "2026-01-10T15:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "53",
+    "title": "Quarterly Townhall",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "HR Team",
+    "postedAt": "2026-01-09T10:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "42",
+    "title": "Payroll Processing Notice",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "Admin",
+    "postedAt": "2026-01-07T11:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "7",
+    "title": "Parking Access Changes",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Management",
+    "postedAt": "2026-01-07T06:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "57",
+    "title": "New HR Policy: Attendance",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "Admin",
+    "postedAt": "2026-01-05T07:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "44",
+    "title": "New Joiners Orientation",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Security",
+    "postedAt": "2026-01-04T14:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "9",
+    "title": "System Downtime Alert",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Finance",
+    "postedAt": "2026-01-04T09:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "37",
+    "title": "System Downtime Alert",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Security",
+    "postedAt": "2026-01-04T07:37:55.753Z",
+    "priority": "Important",
+    "read": false
+  },
+  {
+    "id": "17",
+    "title": "Quarterly Townhall",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "Admin",
+    "postedAt": "2026-01-03T06:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "24",
+    "title": "New Joiners Orientation",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Management",
+    "postedAt": "2026-01-03T05:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "45",
+    "title": "Parking Access Changes",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "HR Team",
+    "postedAt": "2026-01-02T12:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "56",
+    "title": "Parking Access Changes",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "HR Team",
+    "postedAt": "2026-01-02T06:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "32",
+    "title": "Office Holiday Update",
+    "message": "If you face any issues, contact IT support with your employee ID and a brief description.",
+    "author": "IT Ops",
+    "postedAt": "2026-01-02T03:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "20",
+    "title": "Parking Access Changes",
+    "message": "We are rolling out improvements to internal tools for faster performance and better stability.",
+    "author": "Admin",
+    "postedAt": "2026-01-01T11:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "30",
+    "title": "VPN Maintenance",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "Finance",
+    "postedAt": "2026-01-01T09:37:55.753Z",
+    "priority": "Important",
+    "read": false
+  },
+  {
+    "id": "1",
+    "title": "Parking Access Changes",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "Security",
+    "postedAt": "2025-12-31T15:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "43",
+    "title": "Parking Access Changes",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "Finance",
+    "postedAt": "2025-12-29T13:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "48",
+    "title": "VPN Maintenance",
+    "message": "We are rolling out improvements to internal tools for faster performance and better stability.",
+    "author": "Finance",
+    "postedAt": "2025-12-29T09:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "54",
+    "title": "VPN Maintenance",
+    "message": "We are rolling out improvements to internal tools for faster performance and better stability.",
+    "author": "IT Ops",
+    "postedAt": "2025-12-29T04:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "28",
+    "title": "New HR Policy: Attendance",
+    "message": "If you face any issues, contact IT support with your employee ID and a brief description.",
+    "author": "Finance",
+    "postedAt": "2025-12-28T15:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "60",
+    "title": "VPN Maintenance",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "HR Team",
+    "postedAt": "2025-12-28T07:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "5",
+    "title": "New Joiners Orientation",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Finance",
+    "postedAt": "2025-12-26T13:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "25",
+    "title": "Office Holiday Update",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "Security",
+    "postedAt": "2025-12-26T13:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "23",
+    "title": "Quarterly Townhall",
+    "message": "If you face any issues, contact IT support with your employee ID and a brief description.",
+    "author": "IT Ops",
+    "postedAt": "2025-12-26T06:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "52",
+    "title": "VPN Maintenance",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "Admin",
+    "postedAt": "2025-12-24T15:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "21",
+    "title": "Security Patch Window",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Finance",
+    "postedAt": "2025-12-24T04:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "4",
+    "title": "VPN Maintenance",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "IT Ops",
+    "postedAt": "2025-12-23T05:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "59",
+    "title": "Parking Access Changes",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "HR Team",
+    "postedAt": "2025-12-22T13:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "12",
+    "title": "VPN Maintenance",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "HR Team",
+    "postedAt": "2025-12-21T15:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "35",
+    "title": "VPN Maintenance",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "Finance",
+    "postedAt": "2025-12-21T12:37:55.753Z",
+    "priority": "Critical",
+    "read": false
+  },
+  {
+    "id": "2",
+    "title": "Benefits Enrollment Reminder",
+    "message": "We are rolling out improvements to internal tools for faster performance and better stability.",
+    "author": "Management",
+    "postedAt": "2025-12-20T05:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "33",
+    "title": "Payroll Processing Notice",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Management",
+    "postedAt": "2025-12-18T15:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "51",
+    "title": "New Joiners Orientation",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Admin",
+    "postedAt": "2025-12-16T11:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "31",
+    "title": "Parking Access Changes",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "HR Team",
+    "postedAt": "2025-12-16T04:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "55",
+    "title": "New HR Policy: Attendance",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Admin",
+    "postedAt": "2025-12-15T15:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "11",
+    "title": "Office Holiday Update",
+    "message": "If you face any issues, contact IT support with your employee ID and a brief description.",
+    "author": "Admin",
+    "postedAt": "2025-12-15T11:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "10",
+    "title": "System Downtime Alert",
+    "message": "We are rolling out improvements to internal tools for faster performance and better stability.",
+    "author": "Finance",
+    "postedAt": "2025-12-15T04:37:55.753Z",
+    "priority": "Critical",
+    "read": true
+  },
+  {
+    "id": "16",
+    "title": "New HR Policy: Attendance",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "Security",
+    "postedAt": "2025-12-13T08:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "38",
+    "title": "New HR Policy: Attendance",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "Management",
+    "postedAt": "2025-12-12T06:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "41",
+    "title": "Quarterly Townhall",
+    "message": "If you face any issues, contact IT support with your employee ID and a brief description.",
+    "author": "IT Ops",
+    "postedAt": "2025-12-12T05:37:55.753Z",
+    "priority": "Info",
+    "read": false
+  },
+  {
+    "id": "22",
+    "title": "Benefits Enrollment Reminder",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "IT Ops",
+    "postedAt": "2025-12-11T15:37:55.753Z",
+    "priority": "Critical",
+    "read": true
+  },
+  {
+    "id": "8",
+    "title": "Payroll Processing Notice",
+    "message": "Please plan your work accordingly. Some services may be temporarily unavailable during the maintenance window.",
+    "author": "Management",
+    "postedAt": "2025-12-11T11:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "40",
+    "title": "Office Holiday Update",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "Management",
+    "postedAt": "2025-12-10T15:37:55.753Z",
+    "priority": "Important",
+    "read": true
+  },
+  {
+    "id": "27",
+    "title": "Office Holiday Update",
+    "message": "We are rolling out improvements to internal tools for faster performance and better stability.",
+    "author": "Security",
+    "postedAt": "2025-12-10T08:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "36",
+    "title": "New HR Policy: Attendance",
+    "message": "Thanks for your cooperation. We’ll share the completion update once the work is finished.",
+    "author": "HR Team",
+    "postedAt": "2025-12-10T04:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  },
+  {
+    "id": "29",
+    "title": "Office Holiday Update",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "HR Team",
+    "postedAt": "2025-12-08T09:37:55.753Z",
+    "priority": "Critical",
+    "read": false
+  },
+  {
+    "id": "6",
+    "title": "System Downtime Alert",
+    "message": "This is a friendly reminder to review the updated policy and reach out to HR for any clarifications.",
+    "author": "Finance",
+    "postedAt": "2025-12-07T06:37:55.753Z",
+    "priority": "Info",
+    "read": true
+  }
+]
