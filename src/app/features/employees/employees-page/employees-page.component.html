@@ -1,0 +1,153 @@
+<app-employees-toolbar
+  [search]="(query$ | async)?.search ?? ''"
+  (searchChange)="onSearch($event)"
+  (refresh)="load()"
+/>
+
+<!-- ✅ Collapsible Create Employee (Apple-like) -->
+<mat-accordion class="createAcc" multi="false">
+  <mat-expansion-panel
+    class="createPanel"
+    [expanded]="createOpen"
+    (opened)="createOpen = true"
+    (closed)="createOpen = false"
+    hideToggle
+  >
+    <mat-expansion-panel-header class="createHeader">
+      <div class="titleRow">
+  <span class="plusOnly" aria-hidden="true">
+    <mat-icon>add</mat-icon>
+  </span>
+        <div class="subtitle">Creates instantly via store update</div>
+      </div>
+
+
+      <div class="headRight">
+        <div class="miniSpin" *ngIf="(creating$ | async)">
+          <mat-progress-spinner mode="indeterminate" diameter="18"></mat-progress-spinner>
+        </div>
+
+        <button
+          mat-icon-button
+          class="toggleBtn"
+          type="button"
+          [attr.aria-label]="createOpen ? 'Collapse add employee' : 'Expand add employee'"
+        >
+          <mat-icon class="chev" [class.open]="createOpen">expand_more</mat-icon>
+        </button>
+      </div>
+    </mat-expansion-panel-header>
+
+    <div class="createBody">
+      <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Department</mat-label>
+          <input matInput formControlName="department" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Role</mat-label>
+          <input matInput formControlName="role" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Location</mat-label>
+          <input matInput formControlName="location" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Level</mat-label>
+          <input matInput formControlName="level" placeholder="Junior / Mid / Senior / Lead" />
+        </mat-form-field>
+
+        <!-- Actions row -->
+        <div class="actions">
+          <button
+            mat-raised-button
+            color="primary"
+            class="addBtn"
+            type="submit"
+            [disabled]="form.invalid || (creating$ | async)"
+          >
+            Add Employee
+          </button>
+
+          <button
+            mat-stroked-button
+            type="button"
+            class="resetBtn"
+            (click)="resetForm()"
+            [disabled]="(creating$ | async)"
+          >
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<!-- ✅ Employees -->
+<mat-card class="panel">
+  <div class="panelHead">
+    <div class="panelTitle">
+      <div class="pt">EMPLOYEE</div>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <div class="kpiLabel">Total</div>
+        <div class="kpiValue">{{ (total$ | async) ?? 0 }}</div>
+      </div>
+
+      <div class="kpi">
+        <div class="kpiLabel">API Calls</div>
+        <div class="kpiValue">{{ (requests$ | async) ?? 0 }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loader" *ngIf="(inFlight$ | async)">
+    <mat-progress-spinner mode="indeterminate" diameter="44"></mat-progress-spinner>
+    <div class="loader-text">Fetching employees from server…</div>
+  </div>
+
+  <div class="error" *ngIf="(error$ | async) as err">{{ err }}</div>
+
+  <div class="grid" *ngIf="!(inFlight$ | async)">
+    <div *ngFor="let e of (paged$ | async); trackBy: trackById">
+      <app-employee-card
+        [employee]="e"
+        [deleting]="(isDeleting(e.id) | async) ?? false"
+        (delete)="deleteEmployee($event)"
+      />
+    </div>
+  </div>
+
+  <div class="pager" *ngIf="(filteredTotal$ | async) as ft">
+    <button mat-stroked-button (click)="prev()" [disabled]="(query$ | async)?.pageIndex === 0">Prev</button>
+
+    <div class="pageinfo">
+      Page <b>{{ ((query$ | async)?.pageIndex ?? 0) + 1 }}</b>
+      of <b>{{ totalPages(ft, (query$ | async)?.pageSize ?? 500) }}</b>
+    </div>
+
+    <button
+      mat-stroked-button
+      (click)="next(ft)"
+      [disabled]="isLastPage(ft, (query$ | async)?.pageIndex ?? 0, (query$ | async)?.pageSize ?? 500)"
+    >
+      Next
+    </button>
+  </div>
+</mat-card>

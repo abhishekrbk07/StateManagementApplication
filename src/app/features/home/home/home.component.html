@@ -1,0 +1,112 @@
+<section class="hero">
+  <div class="left">
+    <div class="eyebrow">
+      <span class="dot"></span>
+      Demo app • NgRx Store Architecture
+    </div>
+
+    <h1>State Management for High-Performance UI</h1>
+
+    <p class="subtitle">
+      Build faster, smoother Angular apps with a predictable global store, request dedupe, instant UI updates,
+      and scalable pagination strategies.
+    </p>
+
+    <div class="cta">
+      <button mat-raised-button color="primary" routerLink="/employees">
+        Open Employees
+      </button>
+
+      <button mat-stroked-button class="ghost" (click)="warmCache()">
+        Preload Data
+      </button>
+    </div>
+
+    <div class="stats">
+      <app-stat-badge
+        icon="storage"
+        label="Employees in store"
+        [value]="(total$ | async) ?? 0"
+      ></app-stat-badge>
+
+      <app-stat-badge
+        icon="network_check"
+        label="Requests made"
+        [value]="(requests$ | async) ?? 0"
+      ></app-stat-badge>
+
+      <app-stat-badge
+        icon="bolt"
+        label="In-flight"
+        [value]="(inFlight$ | async) ? 'Yes' : 'No'"
+      ></app-stat-badge>
+    </div>
+  </div>
+
+  <mat-card class="right">
+    <div class="cardHead">
+      <div class="cardTitle">Why NgRx improves performance</div>
+      <div class="cardSub">Key benefits you’re demonstrating in this app</div>
+    </div>
+
+    <div class="benefits">
+      <div class="b">
+        <div class="ic">✅</div>
+        <div>
+          <div class="t">No multiple API calls</div>
+          <div class="d">Request de-duplication: if data is loaded / in-flight → skip new request.</div>
+        </div>
+      </div>
+
+      <div class="b">
+        <div class="ic">⚡</div>
+        <div>
+          <div class="t">Faster load time</div>
+          <div class="d">Cache + memoized selectors reduce work and time-to-interactive.</div>
+        </div>
+      </div>
+
+      <div class="b">
+        <div class="ic">🚀</div>
+        <div>
+          <div class="t">Faster UI updates (no server request)</div>
+          <div class="d">Create/Delete updates store immediately; UI refreshes instantly.</div>
+        </div>
+      </div>
+
+      <div class="b">
+        <div class="ic">🧠</div>
+        <div>
+          <div class="t">Debugging is faster</div>
+          <div class="d">Single source of truth + actions make issues traceable.</div>
+        </div>
+      </div>
+
+      <div class="b">
+        <div class="ic">🌍</div>
+        <div>
+          <div class="t">Global store reuse</div>
+          <div class="d">Same data used across tabs/pages without re-fetching.</div>
+        </div>
+      </div>
+
+      <div class="b">
+        <div class="ic">📦</div>
+        <div>
+          <div class="t">Preloading of data</div>
+          <div class="d">Warm cache upfront to make navigation feel instant.</div>
+        </div>
+      </div>
+
+      <div class="b">
+        <div class="ic">📄</div>
+        <div>
+          <div class="t">Smart pagination strategy</div>
+          <div class="d">
+            Maintain data efficiently: fetch in chunks, keep only needed pages, and remove older data when required.
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</section>

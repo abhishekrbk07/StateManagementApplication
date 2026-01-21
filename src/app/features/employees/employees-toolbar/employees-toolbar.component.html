@@ -1,0 +1,42 @@
+<div class="bar">
+  <!-- LEFT -->
+  <div class="title">
+    <div class="h">EMPLOYEES</div>
+
+    <div class="s">
+      <span class="dot"></span>
+      Search & filter instantly
+      <span class="sep">•</span>
+      <span class="hint">NgRx powered</span>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="searchWrap">
+    <mat-form-field
+      appearance="outline"
+      class="search"
+      hideRequiredMarker
+      subscriptSizing="dynamic"
+    >
+      <mat-icon matPrefix class="searchIcon">search</mat-icon>
+
+      <input
+        matInput
+        placeholder="Search name, email, department, role"
+        [(ngModel)]="search"
+        (ngModelChange)="searchChange.emit($event)"
+      />
+
+      <button
+        mat-icon-button
+        matSuffix
+        *ngIf="search"
+        aria-label="Clear"
+        (click)="clearSearch()"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</div>

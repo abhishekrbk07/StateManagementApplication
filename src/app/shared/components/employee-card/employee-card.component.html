@@ -1,0 +1,50 @@
+<mat-card class="card">
+  <!-- Delete pinned top-right -->
+  <button
+    mat-icon-button
+    class="deleteBtn"
+    color="warn"
+    (click)="delete.emit(employee.id)"
+    [disabled]="deleting"
+    aria-label="Delete employee"
+  >
+    <mat-icon *ngIf="!deleting">delete</mat-icon>
+    <mat-progress-spinner *ngIf="deleting" diameter="18" mode="indeterminate"></mat-progress-spinner>
+  </button>
+
+  <!-- Top: avatar + name + dept -->
+  <div class="top">
+    <div class="avatar">{{ initials(employee.name) }}</div>
+
+    <div class="meta">
+      <div class="name" [title]="employee.name">{{ employee.name }}</div>
+      <div class="sub" [title]="employee.role + ' • ' + employee.department">
+        {{ employee.role }} • {{ employee.department }}
+      </div>
+
+      <!-- Email row -->
+      <div class="email" [title]="employee.email">
+        <mat-icon class="emailIcon">mail</mat-icon>
+        <span class="emailText">{{ employee.email }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom: Apple-like labels (Role / Location / Level) -->
+  <div class="labels">
+    <span class="label role" [title]="employee.role">
+      <mat-icon>work</mat-icon>
+      <span class="labelText">{{ employee.role }}</span>
+    </span>
+
+    <span class="label location" [title]="employee.location">
+      <mat-icon>location_on</mat-icon>
+      <span class="labelText">{{ employee.location }}</span>
+    </span>
+
+    <span class="label level" [title]="employee.level">
+      <mat-icon>trending_up</mat-icon>
+      <span class="labelText">{{ employee.level }}</span>
+    </span>
+  </div>
+</mat-card>

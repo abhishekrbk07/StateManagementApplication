@@ -1,0 +1,22 @@
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.ic {
+  opacity: 0.85;
+}
+
+.label {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: 800;
+}

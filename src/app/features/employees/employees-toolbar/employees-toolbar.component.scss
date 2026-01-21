@@ -1,0 +1,171 @@
+:host {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ===== Layout ===== */
+.bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .bar {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* ===== Title ===== */
+.title {
+  min-width: 0;
+}
+
+.h {
+  font-size: 28px;
+  font-weight: 850;
+  letter-spacing: -0.6px;
+  color: #0f172a;
+  line-height: 1.15;
+}
+
+.s {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: -0.1px;
+  color: rgba(15, 23, 42, 0.6);
+
+  white-space: nowrap;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.95);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.14);
+}
+
+.sep {
+  opacity: 0.55;
+}
+
+.hint {
+  padding: 4px 10px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.25px;
+
+  background: rgba(24, 119, 242, 0.09);
+  border: 1px solid rgba(24, 119, 242, 0.2);
+  color: rgba(24, 119, 242, 0.95);
+}
+
+/* ===== Search Wrapper ===== */
+.searchWrap {
+  min-width: 380px;
+}
+
+@media (max-width: 900px) {
+  .searchWrap {
+    min-width: 100%;
+  }
+}
+
+.search {
+  width: 100%;
+}
+
+/* ===== Apple-like pill styling ===== */
+:host ::ng-deep .search .mat-mdc-text-field-wrapper {
+  border-radius: 999px !important;
+  background: #fff !important;
+  box-shadow: 0 10px 26px rgba(2, 6, 23, 0.06);
+  overflow: hidden !important; /* important to avoid border artifacts */
+}
+
+:host ::ng-deep .search .mat-mdc-form-field-flex {
+  align-items: center !important;
+  padding-left: 2px !important;
+}
+
+:host ::ng-deep .search input.mat-mdc-input-element {
+  font-size: 14px;
+  font-weight: 650;
+  letter-spacing: -0.1px;
+  color: #0f172a;
+  padding: 12px 4px !important;
+}
+
+:host ::ng-deep .search input::placeholder {
+  color: rgba(15, 23, 42, 0.45);
+}
+
+.searchIcon {
+  opacity: 0.55;
+}
+
+/* Focus glow (Apple-ish) */
+:host ::ng-deep .search.mat-focused .mat-mdc-text-field-wrapper {
+  box-shadow: 0 14px 34px rgba(24, 119, 242, 0.12);
+}
+
+/* Clear button */
+:host ::ng-deep .search button.mat-mdc-icon-button {
+  border-radius: 999px !important;
+}
+
+/* =========================
+   HARD FIX: remove extra left "handle"
+   ========================= */
+
+/* Remove notch */
+:host ::ng-deep .search .mdc-notched-outline__notch {
+  display: none !important;
+}
+
+/* Kill the left outline segment */
+:host ::ng-deep .search .mdc-notched-outline__leading {
+  width: 0 !important;
+  min-width: 0 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Keep pill outline smooth */
+:host ::ng-deep .search .mdc-notched-outline {
+  border-radius: 999px !important;
+}
+
+:host ::ng-deep .search .mdc-notched-outline__trailing {
+  border-radius: 999px !important;
+}
+
+/* Fix prefix container spacing so pill starts clean */
+:host ::ng-deep .search .mat-mdc-form-field-icon-prefix {
+  margin: 0 !important;
+  padding-left: 14px !important; /* spacing for icon */
+  padding-right: 8px !important;
+}
+
+/* Avoid infix pushing border */
+:host ::ng-deep .search .mat-mdc-form-field-infix {
+  padding-left: 0 !important;
+}
+
+/* Remove subscript gap */
+:host ::ng-deep .search .mat-mdc-form-field-subscript-wrapper {
+  display: none !important;
+}

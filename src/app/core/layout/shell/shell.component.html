@@ -1,0 +1,47 @@
+<mat-toolbar class="topbar" color="primary">
+  <div class="topbar-inner">
+    <a class="brand" routerLink="/" aria-label="Pro Employee Portal">
+      <mat-icon class="brand-ic">dashboard</mat-icon>
+      <span class="brand-text">Pro Employee Portal</span>
+    </a>
+
+    <div class="spacer"></div>
+
+    <nav class="nav">
+      <a
+        mat-button
+        class="nav-link"
+        routerLink="/"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <mat-icon class="nav-ic">home</mat-icon>
+        <span class="nav-txt">Home</span>
+      </a>
+
+      <a
+        mat-button
+        class="nav-link"
+        routerLink="/employees"
+        routerLinkActive="active-link"
+      >
+        <mat-icon class="nav-ic">groups</mat-icon>
+        <span class="nav-txt">Employees</span>
+      </a>
+
+      <a
+        mat-button
+        class="nav-link"
+        routerLink="/analytics"
+        routerLinkActive="active-link"
+      >
+        <mat-icon class="nav-ic">analytics</mat-icon>
+        <span class="nav-txt">Analytics</span>
+      </a>
+    </nav>
+  </div>
+</mat-toolbar>
+
+<main class="page">
+  <router-outlet></router-outlet>
+</main>
