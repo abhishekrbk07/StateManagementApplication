@@ -1,0 +1,96 @@
+<div class="pageHead">
+  <div class="ttl">
+    <div class="h">Self Service</div>
+    <div class="s">Holidays, Claims, Policies — store-first (no repeated refetch)</div>
+  </div>
+
+  <div class="headRight">
+    <div class="mini">
+      <div class="k">API Requests Avoided</div>
+      <div class="v">{{ ((requests$ | async) ?? 0) - 3 }}</div>
+    </div>
+
+    <button mat-stroked-button class="refreshBtn" type="button" (click)="refreshAll()">
+      <mat-icon>refresh</mat-icon>
+      Refresh
+    </button>
+  </div>
+</div>
+
+<mat-card class="panel">
+  <div class="loader" *ngIf="(inFlight$ | async)">
+    <mat-progress-spinner mode="indeterminate" diameter="44"></mat-progress-spinner>
+    <div class="loaderText">Loading self-service data…</div>
+  </div>
+
+  <div class="error" *ngIf="(error$ | async) as err">{{ err }}</div>
+
+  <mat-tab-group class="tabs" *ngIf="!(inFlight$ | async)">
+    <!-- Holidays -->
+    <mat-tab label="Holidays">
+      <div class="grid">
+        <mat-card class="item" *ngFor="let h of (holidays$ | async)">
+          <div class="row">
+            <div class="ic"><mat-icon>event</mat-icon></div>
+
+            <div class="meta">
+              <div class="t">{{ h.name }}</div>
+              <div class="sub">{{ h.date | date:'MMM d, yyyy' }}</div>
+            </div>
+
+            <!-- ✅ FIX: Holiday has region, not type -->
+            <mat-chip class="chip">{{ h.region || 'All' }}</mat-chip>
+          </div>
+        </mat-card>
+      </div>
+    </mat-tab>
+
+    <!-- Claims -->
+    <mat-tab label="Claims">
+      <div class="grid">
+        <mat-card class="item" *ngFor="let c of (claims$ | async)">
+          <div class="row">
+            <div class="ic"><mat-icon>receipt_long</mat-icon></div>
+
+            <div class="meta">
+              <div class="t">{{ c.type }} Claim</div>
+              <!-- ✅ FIX: submittedAt not submittedOn -->
+              <div class="sub">Submitted: {{ c.submittedAt | date:'MMM d, yyyy' }}</div>
+            </div>
+
+            <div class="right">
+              <!-- ✅ FIX: no currency in model -->
+              <div class="amt">₹ {{ c.amount }}</div>
+
+              <mat-chip class="chip"
+                        [class.ok]="c.status==='Approved'"
+                        [class.warn]="c.status==='Submitted'"
+                        [class.bad]="c.status==='Rejected'">
+                {{ c.status }}
+              </mat-chip>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </mat-tab>
+
+    <!-- Policies -->
+    <mat-tab label="Policies">
+      <div class="grid">
+        <mat-card class="item" *ngFor="let p of (policies$ | async)">
+          <div class="row">
+            <div class="ic"><mat-icon>policy</mat-icon></div>
+
+            <div class="meta">
+              <div class="t">{{ p.title }}</div>
+              <!-- ✅ FIX: updatedAt not updatedOn -->
+              <div class="sub">Updated: {{ p.updatedAt | date:'MMM d, yyyy' }}</div>
+            </div>
+
+            <mat-chip class="chip">{{ p.category }}</mat-chip>
+          </div>
+        </mat-card>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</mat-card>

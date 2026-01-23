@@ -1,0 +1,5 @@
+[
+  { "id": "P-01", "title": "Work From Home Policy", "category": "HR", "updatedOn": "2025-12-10" },
+  { "id": "P-02", "title": "Leave & Attendance Policy", "category": "HR", "updatedOn": "2025-11-05" },
+  { "id": "P-03", "title": "Expense Reimbursement Policy", "category": "Finance", "updatedOn": "2025-10-22" }
+]

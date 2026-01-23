@@ -1,0 +1,5 @@
+[
+  { "id": "C-10021", "type": "Travel", "amount": 2450, "currency": "INR", "status": "Approved", "submittedOn": "2026-01-10" },
+  { "id": "C-10022", "type": "Medical", "amount": 1200, "currency": "INR", "status": "Pending", "submittedOn": "2026-01-14" },
+  { "id": "C-10023", "type": "Internet", "amount": 999, "currency": "INR", "status": "Rejected", "submittedOn": "2026-01-18" }
+]

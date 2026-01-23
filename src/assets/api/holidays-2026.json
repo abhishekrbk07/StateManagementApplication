@@ -1,0 +1,7 @@
+[
+  { "id": "H-2026-01", "date": "2026-01-26", "name": "Republic Day", "type": "National" },
+  { "id": "H-2026-02", "date": "2026-03-08", "name": "Holi", "type": "Festival" },
+  { "id": "H-2026-03", "date": "2026-04-14", "name": "New Year (Regional)", "type": "Regional" },
+  { "id": "H-2026-04", "date": "2026-08-15", "name": "Independence Day", "type": "National" },
+  { "id": "H-2026-05", "date": "2026-10-20", "name": "Diwali", "type": "Festival" }
+]

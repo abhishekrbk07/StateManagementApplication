@@ -24,6 +24,12 @@ export const appRoutes: Routes = [
       },
       { path: 'analytics', component: EmployeesAnalyticsComponent },
       {
+        path: 'self-service',
+        loadComponent: () =>
+          import('./features/self-service/self-service-page/self-service-page.component')
+            .then(m => m.SelfServicePageComponent),
+      },
+      {
         path: 'announcements',
         loadComponent: () =>
           import('./features/announcements/ announcements-page/announcements-page.component')
