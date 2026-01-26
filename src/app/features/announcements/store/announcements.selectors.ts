@@ -5,7 +5,7 @@ import { Announcement } from './announcements.models';
 
 const selectFeature = createFeatureSelector<AnnouncementsState>(ANNOUNCEMENTS_FEATURE_KEY);
 
-// ✅ safe: prevents crashes before feature state exists (or during init)
+//  safe: prevents crashes before feature state exists (or during init)
 const selectStateSafe = createSelector(selectFeature, s => s ?? initialAnnouncementsState);
 
 export const AnnouncementsSelectors = {

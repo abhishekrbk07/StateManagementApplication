@@ -4,7 +4,7 @@ import { SelfServiceState, initialSelfServiceState } from './self-service.reduce
 
 const selectFeature = createFeatureSelector<SelfServiceState>(SELF_SERVICE_FEATURE_KEY);
 
-// ✅ safe during app init
+//  safe during app init
 const selectStateSafe = createSelector(selectFeature, s => s ?? initialSelfServiceState);
 
 export const SelfServiceSelectors = {

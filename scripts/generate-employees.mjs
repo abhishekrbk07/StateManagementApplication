@@ -27,4 +27,4 @@ for (let i = 1; i <= count; i++) {
 }
 
 fs.writeFileSync("src/assets/employees.json", JSON.stringify(employees, null, 2));
-console.log("✅ Generated src/assets/employees.json with", employees.length, "employees");
+console.log(" Generated src/assets/employees.json with", employees.length, "employees");

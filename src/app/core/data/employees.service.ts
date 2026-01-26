@@ -21,7 +21,7 @@ export class EmployeesService {
     return of(created).pipe(delay(600));
   }
 
-  // ✅ delete API (simulated 200)
+  // delete API (simulated 200)
   deleteEmployee(id: string): Observable<void> {
     return of(void 0).pipe(delay(400));
   }

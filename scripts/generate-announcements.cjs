@@ -70,4 +70,4 @@ announcements.sort((a, b) => (b.postedAt || "").localeCompare(a.postedAt || ""))
 
 const out = path.join(process.cwd(), "src/assets/announcements.json");
 fs.writeFileSync(out, JSON.stringify(announcements, null, 2));
-console.log("✅ Generated", out, "with", announcements.length, "announcements");
+console.log("Generated", out, "with", announcements.length, "announcements");

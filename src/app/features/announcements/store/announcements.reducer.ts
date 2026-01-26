@@ -29,13 +29,13 @@ export const initialAnnouncementsState: AnnouncementsState = {
 export const announcementsReducer = createReducer(
   initialAnnouncementsState,
 
-  // ✅ LoadRequested does NOT change requestsCount anymore
+  //  LoadRequested does NOT change requestsCount anymore
   on(AnnouncementsActions.loadRequested, state => ({
     ...state,
     error: null,
   })),
 
-  // ✅ When we actually start an API call
+  //  When we actually start an API call
   on(AnnouncementsActions.loadForced, state => ({
     ...state,
     inFlight: true,

@@ -14,7 +14,7 @@ export interface EmployeesState extends EntityState<Employee> {
 
   creating: boolean;
 
-  // ✅ per-card deleting spinner
+  // per-card deleting spinner
   deleting: Record<string, boolean>;
 }
 
@@ -85,7 +85,7 @@ export const employeesFeature = createFeature({
       error,
     })),
 
-    // ✅ Delete
+    //  Delete
     on(EmployeesActions.deleteRequested, (state, { id }) => ({
       ...state,
       error: null,

@@ -24,19 +24,19 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(),
     provideHttpClient(),
 
-    // ✅ Root store
+    // Root store
     provideStore(),
 
-    // ✅ Feature state
+    // Feature state
     provideState(employeesFeature),
     provideState(ANNOUNCEMENTS_FEATURE_KEY, announcementsReducer),
     provideState(SELF_SERVICE_FEATURE_KEY, selfServiceReducer),
 
-    // ✅ Effects
+    //  Effects
     provideEffects([EmployeesEffects, AnnouncementsEffects,SelfServiceEffects
     ]),
 
-    // ✅ Devtools
+    //  Devtools
     provideStoreDevtools({
       maxAge: 25,
       logOnly: !isDevMode(),

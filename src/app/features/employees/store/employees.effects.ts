@@ -44,7 +44,7 @@ export class EmployeesEffects {
     )
   );
 
-  // ✅ Delete: on 200 remove from store (NO re-fetch)
+  // Delete: on 200 remove from store (NO re-fetch)
   delete$ = createEffect(() =>
     this.actions$.pipe(
       ofType(EmployeesActions.deleteRequested),

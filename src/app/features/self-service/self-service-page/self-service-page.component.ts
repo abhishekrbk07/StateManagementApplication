@@ -35,7 +35,7 @@ export class SelfServicePageComponent implements OnInit {
   policies$ = this.store.select(SelfServiceSelectors.selectPolicies);
 
   ngOnInit(): void {
-    // ✅ store-first effects (loads once, then noop on next visits)
+    //  store-first effects (loads once, then noop on next visits)
     this.store.dispatch(SelfServiceActions.loadHolidaysRequested());
     this.store.dispatch(SelfServiceActions.loadClaimsRequested());
     this.store.dispatch(SelfServiceActions.loadPoliciesRequested());

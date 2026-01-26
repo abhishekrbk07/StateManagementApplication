@@ -32,7 +32,7 @@ export class EmployeesAnalyticsComponent implements OnInit {
   departmentStats$ = this.store.select(EmployeesSelectors.selectDepartmentStats);
 
   ngOnInit(): void {
-    // ✅ Fetch once, reused globally (Employees / Analytics tabs)
+    //  Fetch once, reused globally (Employees / Analytics tabs)
     this.store.dispatch(EmployeesActions.loadRequested());
   }
   short(name: string) {

@@ -60,7 +60,7 @@ export const selfServiceReducer = createReducer(
     error,
   })),
 
-  // ✅ CRITICAL FIX: when already loaded → stop spinner
+  //  CRITICAL FIX: when already loaded → stop spinner
   on(SelfServiceActions.noopHolidaysAlreadyLoaded, state => ({
     ...state,
     holidaysInFlight: false,

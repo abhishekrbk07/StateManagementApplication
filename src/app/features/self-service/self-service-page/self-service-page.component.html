@@ -38,7 +38,7 @@
               <div class="sub">{{ h.date | date:'MMM d, yyyy' }}</div>
             </div>
 
-            <!-- ✅ FIX: Holiday has region, not type -->
+            <!-- FIX: Holiday has region, not type -->
             <mat-chip class="chip">{{ h.region || 'All' }}</mat-chip>
           </div>
         </mat-card>
@@ -54,12 +54,12 @@
 
             <div class="meta">
               <div class="t">{{ c.type }} Claim</div>
-              <!-- ✅ FIX: submittedAt not submittedOn -->
+              <!--  FIX: submittedAt not submittedOn -->
               <div class="sub">Submitted: {{ c.submittedAt | date:'MMM d, yyyy' }}</div>
             </div>
 
             <div class="right">
-              <!-- ✅ FIX: no currency in model -->
+              <!--  FIX: no currency in model -->
               <div class="amt">₹ {{ c.amount }}</div>
 
               <mat-chip class="chip"
@@ -83,7 +83,7 @@
 
             <div class="meta">
               <div class="t">{{ p.title }}</div>
-              <!-- ✅ FIX: updatedAt not updatedOn -->
+              <!--  FIX: updatedAt not updatedOn -->
               <div class="sub">Updated: {{ p.updatedAt | date:'MMM d, yyyy' }}</div>
             </div>
 

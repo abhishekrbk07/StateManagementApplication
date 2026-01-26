@@ -68,7 +68,7 @@ export class EmployeesPageComponent implements OnInit {
   error$ = this.store.select(EmployeesSelectors.selectError);
   requests$ = this.store.select(EmployeesSelectors.selectRequestsCount);
 
-  // ✅ Collapsible "Add Employee"
+  //  Collapsible "Add Employee"
   createOpen = false;
 
   form = this.fb.group({

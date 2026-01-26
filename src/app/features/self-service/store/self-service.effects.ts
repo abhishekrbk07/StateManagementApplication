@@ -20,11 +20,11 @@ export class SelfServiceEffects {
       withLatestFrom(this.store.select(SelfServiceSelectors.selectHolidaysLoaded)),
       switchMap(([_, loaded]) => {
         if (loaded) {
-          // ✅ store hit → instant
+          // store hit → instant
           return of(SelfServiceActions.noopHolidaysAlreadyLoaded());
         }
 
-        // ✅ API call → delayed
+        //  API call → delayed
         return this.api.getHolidays().pipe(
           delay(800),
           map(holidays =>

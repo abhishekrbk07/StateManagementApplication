@@ -15,30 +15,30 @@ export class AnnouncementsEffects {
 
   load$ = createEffect(() =>
     this.actions$.pipe(
-      // ✅ only entry point is LoadRequested
+      //  only entry point is LoadRequested
       ofType(AnnouncementsActions.loadRequested),
 
-      // ✅ check store state
+      //  check store state
       withLatestFrom(
         this.store.select(AnnouncementsSelectors.selectLoaded),
         this.store.select(AnnouncementsSelectors.selectInFlight)
       ),
 
       switchMap(([_, loaded, inFlight]) => {
-        // ✅ already cached
+        //  already cached
         if (loaded) return of(AnnouncementsActions.noopAlreadyLoaded());
 
-        // ✅ request already running
+        //  request already running
         if (inFlight) return of(AnnouncementsActions.noopAlreadyLoaded());
 
-        // ✅ start real API request (this increments requestsCount)
+        //  start real API request (this increments requestsCount)
         // We use LoadForced to mark inFlight=true & requestsCount++
         return of(AnnouncementsActions.loadForced());
       })
     )
   );
 
-  // ✅ actual API call happens ONLY when LoadForced happens
+  //  actual API call happens ONLY when LoadForced happens
   callApi$ = createEffect(() =>
     this.actions$.pipe(
       ofType(AnnouncementsActions.loadForced),

@@ -5,7 +5,7 @@ export const AnnouncementsActions = createActionGroup({
   source: 'Announcements',
   events: {
     LoadRequested: emptyProps(),
-    LoadForced: emptyProps(), // ✅ force refresh if needed
+    LoadForced: emptyProps(), //  force refresh if needed
 
     LoadSucceeded: props<{ announcements: Announcement[] }>(),
     LoadFailed: props<{ error: string }>(),

@@ -22,7 +22,7 @@ export const EmployeesActions = createActionGroup({
     'Create Succeeded': props<{ employee: Employee }>(),
     'Create Failed': props<{ error: string }>(),
 
-    // ✅ Delete
+    //  Delete
     'Delete Requested': props<{ id: string }>(),
     'Delete Succeeded': props<{ id: string }>(),
     'Delete Failed': props<{ error: string }>(),

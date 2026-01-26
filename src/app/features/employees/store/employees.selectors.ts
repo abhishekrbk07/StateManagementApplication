@@ -8,7 +8,7 @@ export class EmployeesSelectors {
   static selectError = employeesFeature.selectError;
   static selectRequestsCount = employeesFeature.selectRequestsCount;
 
-  // ✅ delete map
+  //  delete map
   static selectDeletingMap = employeesFeature.selectDeleting;
 
   static selectQuery = employeesFeature.selectQuery;
