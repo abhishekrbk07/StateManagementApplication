@@ -10,16 +10,6 @@
     </div>
 
     <div class="right" *ngIf="querySnapshot$ | async as q">
-      <mat-form-field class="search" appearance="outline" subscriptSizing="dynamic">
-        <mat-icon matPrefix class="ic">search</mat-icon>
-        <input
-          matInput
-          placeholder="Search title or message..."
-          [ngModel]="q.search"
-          (ngModelChange)="onSearch($event)"
-        />
-      </mat-form-field>
-
       <button mat-stroked-button class="pill" (click)="toggleUnreadOnly(!q.showUnreadOnly)">
         <mat-icon class="pillIc">{{ q.showUnreadOnly ? 'done_all' : 'mark_email_unread' }}</mat-icon>
         {{ q.showUnreadOnly ? 'Show all' : 'Unread only' }}
