@@ -10,6 +10,9 @@ export const EmployeesActions = createActionGroup({
     'Load Succeeded': props<{ employees: Employee[] }>(),
     'Load Failed': props<{ error: string }>(),
 
+    // Add this under Load actions
+    'Preload Requested': emptyProps(),
+
     // Query
     'Page Changed': props<{ pageIndex: number; pageSize: number }>(),
     'Search Changed': props<{ search: string }>(),

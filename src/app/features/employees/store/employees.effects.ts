@@ -56,4 +56,21 @@ export class EmployeesEffects {
       )
     )
   );
+
+  preload$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(EmployeesActions.preloadRequested),
+      switchMap(() =>
+        this.store.select(EmployeesSelectors.selectLoaded).pipe(take(1))
+      ),
+      switchMap(loaded => {
+        if (loaded) return of();
+        return this.api.preloadEmployees().pipe(
+          map(employees => EmployeesActions.loadSucceeded({ employees })),
+          catchError(() => of()) // silent preload failure
+        );
+      })
+    )
+  );
+
 }

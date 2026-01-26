@@ -33,6 +33,6 @@ export class HomeComponent {
 
   warmCache() {
     // Demonstrates request de-dupe: calling load again won't hit the API if already loaded/inFlight.
-    this.store.dispatch(EmployeesActions.loadRequested());
+    this.store.dispatch(EmployeesActions.preloadRequested());
   }
 }

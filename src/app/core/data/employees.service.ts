@@ -12,6 +12,10 @@ export class EmployeesService {
     return this.http.get<Employee[]>('/assets/employees.json').pipe(delay(2000));
   }
 
+  preloadEmployees(): Observable<Employee[]> {
+    return this.http.get<Employee[]>('/assets/employees.json').pipe(delay(500));
+  }
+
   createEmployee(payload: CreateEmployeeRequest): Observable<Employee> {
     const created: Employee = { id: crypto.randomUUID(), ...payload };
     return of(created).pipe(delay(600));
